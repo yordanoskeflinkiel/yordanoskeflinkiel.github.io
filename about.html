@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me | Yordanos Keflinkiel</title>
+  <link rel="icon" href="girlastronaut.png" type="image/png" sizes="256x256" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+  :root {
+    --primary: #14b8a6; /* teal */
+    --dark-bg: #0f172a; /* very dark blue-gray */
+    --light-bg: #f9fafb;
+    --accent: #a7f3d0;  /* mint */
+    --shadow: rgba(0, 0, 0, 0.08);
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--light-bg);
+    color: #111827;
+    line-height: 1.6;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(to right, #0f766e, #14b8a6);
+    color: white;
+    box-shadow: 0 2px 8px var(--shadow);
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover {
+    color: var(--accent);
+  }
+
+  section {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 3rem;
+    animation: fadeIn 1s ease forwards;
+  }
+
+  .hero img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 100px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    justify-self: center;
+    transition: transform 0.3s ease;
+  }
+
+  .hero img:hover {
+    transform: scale(1.05);
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #0f766e;
+  }
+
+  .hero-text a.button {
+    display: inline-block;
+    background-color: #14b8a6;
+    color: white;
+    padding: 0.6rem 1.4rem;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 1rem;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+
+  .hero-text a.button:hover {
+    background-color: #0f766e;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-align: center;
+    color: #0f766e;
+    position: relative;
+  }
+
+  .section-title::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+
+  .extra-list, .social-list, .fun-facts {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    animation: fadeIn 0.8s ease-in;
+  }
+
+  .extra-list li, .social-list li, .fun-facts li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #ffffff;
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .extra-list li:hover, .social-list li:hover, .fun-facts li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  }
+
+  .extra-list img, .social-list img {
+    width: 60px;
+    border-radius: 8px;
+  }
+
+  .fun-facts img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .education, .social {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .education img, .social img {
+    max-width: 200px;
+    border-radius: 1rem;
+  }
+
+  .education-text, .social-text {
+    flex: 1;
+  }
+
+  footer {
+    background: linear-gradient(to right, #0f766e, #0f172a);
+    color: white;
+    text-align: center;
+    padding: 2.0rem 1rem;
+    font-size: 0.95rem;
+    margin-top: 4rem;
+  }
+
+  footer a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .hero-text {
+      padding-top: 1.5rem;
+    }
+
+    .extra-list li, .social-list li, .fun-facts li {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+    #scroll-pet {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    }
+
+    @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-40px); }
+    }
+
+    #scroll-pet {
+    animation: float 3s ease-in-out infinite;
+    }
+
+</style>
+
+</head>
+<body>
+   <img src="astronaut.png" alt="Scroll Pet" id="scroll-pet">
+
+
+
+  <nav>
+    <div>
+      <a href="about.html">About Me</a>
+    </div>
+    <div>
+      <a href="projects.html">Projects</a>
+      <a href="3d_work.html">3D Work</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <img src="profile-picture.jpg" alt="Yordanos Keflinkiel">
+    <div class="hero-text">
+      <h1>Hi, I'm Yordanos</h1>
+      <p>
+        I'm a second-year Mechanical Engineering student at Ontario Tech University. I’ve been developing hands-on skills in design and simulation using SolidWorks and Blender, exploring how mechanical components interact in real-world systems. I’m proud of the progress I’ve made and excited to keep growing as an engineer.
+      </p>
+      <a href="YordanosKeflinkiel_MSResume2025.pdf" download class="button">Download Resume</a>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">🚀 Extracurricular Involvement</h2>
+    <ul class="extra-list">
+        <li><img src="nuclear.PNG" alt="Nuclear"> <span>Reactor Simulator Research Group </span></li>
+        <li><img src="rocket.jpeg" alt="Rocketry"> <span>Rocketry Team Member – Propulsion Department</span></li>
+        <li><img src="robotics.jpeg" alt="Robotics"> <span>Robotics Team Member – Software Department</span></li>
+    </ul>
+  </section>
+
+  <section>
+  <h2 class="section-title">👩‍🚀 Fun Facts 🔭</h2>
+  <ul class="fun-facts">
+    <li>
+      <img src="cosomos.jpeg" alt="Cosmos Documentary">
+      <span>In 7th and 8th grade, I would binge watch the <em>Cosmos: A Spacetime Odyssey</em> documentary, it sparked my interest in space and space exploration.</span>
+    </li>
+    <li>
+      <img src="rocketproject.jpg" alt="ISS Model">
+      <span>For my Grade 12 Biology final project, I recreated a miniature model of the International Space Station as well as 2 rockets and a satellite to represent enzyme behavior.</span>
+    </li>
+    <li>
+      <img src="car.JPG" alt="Simulation">
+      <span>Ever since taking my Fluid Mechanics course, I’ve been testing random builds made in SolidWorks to explore their <aerodynamic>fluid mechanic properties, it’s become a fun way to apply what I’ve learned.</span>
+    </li>
+    <li>
+      <img src="web-development.png".jpg" alt="Software Engineering">
+      <span>Originally enrolled in Software Engineering and finished with a 3.42 and 3.80 in my core semesters before switching to Mechanical Engineering.</span>
+    </li>
+  </ul>
+</section>
+
+
+  <section class="social">
+    <div class="social-text">
+      <h2 class="section-title">Let's Connect</h2>
+      <ul class="social-list">
+        <li>
+          <img src="social-picture.png" alt="LinkedIn">
+          <span>Let's connect <a href="https://www.linkedin.com/in/yordanos-keflinkiel-210595260/" target="_blank">LinkedIn</a></span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>Contact me at <a href="mailto:yordanostkeflinkiel@gmail.com">yordanostkeflinkiel@gmail.com</a><br>
+  </footer>
+</body>
+<script>
+     document.getElementById('scroll-pet').addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+
+</html>

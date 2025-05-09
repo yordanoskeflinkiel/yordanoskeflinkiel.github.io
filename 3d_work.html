@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>3D Work | Yordanos Keflinkiel</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="girlastronaut.png" type="image/png" sizes="256x256" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+  :root {
+    --primary: #0f766e;   /* Teal */
+    --accent: #6ee7b7;    /* Mint */
+    --dark-bg: #1f2937;
+    --light-bg: #f9fafb;
+    --shadow: rgba(0, 0, 0, 0.07);
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--light-bg);
+    color: #111827;
+    line-height: 1.6;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(to right, #0f766e, #14b8a6);
+    color: white;
+    box-shadow: 0 2px 8px var(--shadow);
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover {
+    color: var(--accent);
+  }
+
+  section {
+    max-width: 1600px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #0f766e;
+    position: relative;
+  }
+
+  .section-title::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+
+  .project {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px var(--shadow);
+    margin-bottom: 4rem;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.8s ease forwards;
+  }
+
+  .project:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .project-content {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .project-text {
+    flex: 2;
+  }
+
+  .project h3 {
+    margin-top: 0;
+    color: #1f2937;
+    font-size: 1.5rem;
+    border-left: 4px solid var(--primary);
+    padding-left: 0.75rem;
+  }
+
+  .project-icon img {
+    max-width: 64px;
+    border-radius: 8px;
+  }
+
+  .project-images,
+  .project2-images,
+  .project5-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+  }
+
+  .project-images img,
+  .project2-images img,
+  .project5-images img {
+    max-width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--shadow);
+    transition: transform 0.3s ease;
+  }
+
+  .project-images img:hover,
+  .project2-images img:hover,
+  .project5-images img:hover {
+    transform: scale(1.05);
+  }
+
+  footer {
+    background: linear-gradient(to right, var(--primary), var(--dark-bg));
+    color: #e5e7eb;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    font-size: 0.95rem;
+    margin-top: 4rem;
+  }
+
+  footer a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .project-content {
+      flex-direction: column;
+      text-align: center;
+    }
+    .project-icon {
+      margin-top: 1rem;
+    }
+  }
+       #scroll-pet {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 80px;
+        height: 80px;
+        z-index: 1000;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-40px); }
+    }
+
+    #scroll-pet {
+        animation: float 3s ease-in-out infinite;
+    }
+</style>
+</head>
+<body>
+    <img src="meteor.png" alt="Scroll Pet" id="scroll-pet">
+  <nav>
+    <div>
+      <a href="about.html">About Me</a>
+    </div>
+    <div>
+      <a href="projects.html">Projects</a>
+      <a href="3d_work.html">3D Work</a>
+    </div>
+  </nav>
+
+  <section>
+    <h2 class="section-title">3D Work</h2>
+
+    <!-- Projects -->
+    <div class="project">
+      <div class="project-content">
+        <div class="project-text">
+          <h3>After The Snow Storm</h3>
+          <p>This project began with a tutorial-based house and evolved into a custom snow-covered neighborhood scene over 2–3 days.</p>
+        </div>
+        <div class="project-icon">
+          <img src="house.png" alt="Snow Storm Icon" />
+        </div>
+      </div>
+      <div class="project-images">
+        <img src="project 1-1.png" alt="Scene 1" />
+        <img src="project 1-2.png" alt="Scene 2" />
+        <img src="project 1-3.png" alt="Scene 3" />
+        <img src="project 1-4.png" alt="Scene 4" />
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-content">
+        <div class="project-text">
+          <h3>Morning Kitchen</h3>
+          <p>A soft, moody kitchen scene designed with ambient fog. This piece blends cozy morning vibes with visual storytelling.</p>
+        </div>
+        <div class="project-icon">
+          <img src="kitchen.png" alt="Kitchen Icon" />
+        </div>
+      </div>
+      <div class="project2-images">
+        <img src="project 2-1.png" alt="Kitchen Render" />
+        <img src="project 2-2.png" alt="Kitchen Render" />
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-content">
+        <div class="project-text">
+          <h3>Cosy Room</h3>
+          <p>Inspired by a tutorial but customized with a sleek, modern design. This was one of my earliest explorations in creating a full interior scene.</p>
+        </div>
+        <div class="project-icon">
+          <img src="bed.png" alt="Room Icon" />
+        </div>
+      </div>
+      <div class="project-images">
+        <img src="project 3-4.PNG" alt="Room 1" />
+        <img src="project 3-3.PNG" alt="Room 2" />
+        <img src="project 3-1.png" alt="Room 3" />
+        <img src="project 3-2.png" alt="Room 4" />
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-content">
+        <div class="project-text">
+          <h3>Exploratory Projects</h3>
+          <p>Quick creative experiments to test ideas, tools, and techniques. Each one offered a valuable learning experience.</p>
+        </div>
+        <div class="project-icon">
+          <img src="sword.png" alt="Exploratory Icon" />
+        </div>
+      </div>
+      <div class="project5-images">
+        <img src="project 5-1.PNG" alt="Test Scene 1" />
+        <img src="project 5-2.PNG" alt="Test Scene 2" />
+        <img src="project 5-4.jpg" alt="Test Scene 3" />
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Contact me at <a href="mailto:yordanostkeflinkiel@gmail.com">yordanostkeflinkiel@gmail.com</a></p>
+  </footer>
+</body>
+<script>
+  document.getElementById('scroll-pet').addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+</html>

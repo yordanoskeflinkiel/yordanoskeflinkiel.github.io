@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome | Portfolio</title>
+  <link rel="icon" href="girlastronaut.png" type="image/png" sizes="256x256" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --teal: #0f766e;
+      --mint: #a7f3d0;
+      --background: #f0fdfa;
+      --text: #111827;
+      --glass: rgba(255, 255, 255, 0.85);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--background);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .computer-frame {
+      background: var(--glass);
+      border-radius: 16px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      max-width: 700px;
+      width: 90%;
+      border: 1px solid #d1d5db;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .window-header {
+      background: #e5e7eb;
+      padding: 0.5rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .window-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .red { background: #f87171; }
+    .yellow { background: #facc15; }
+    .green { background: #4ade80; }
+
+    .welcome-screen {
+      padding: 2.5rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      color: var(--teal);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .learn-more {
+      background-color: var(--teal);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 999px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .learn-more:hover {
+      background-color: #115e59;
+      transform: scale(1.05);
+    }
+
+    .mouse-click-icon {
+      width: 50px;
+      animation: float 2.5s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .welcome-screen {
+        padding: 2rem;
+      }
+
+      h1 {
+        font-size: 1.75rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+    
+  <div class="computer-frame">
+    <div class="window-header">
+      <div class="window-dot red"></div>
+      <div class="window-dot yellow"></div>
+      <div class="window-dot green"></div>
+    </div>
+    <div class="welcome-screen">
+      <h1>Welcome to My Portfolio</h1>
+      <p>
+       Hello! I'm Yordanos, a Mechanical Engineering student with a passion for design, simulation, and hands-on problem-solving. 
+        Explore my projects where mechanics meets creativity, from CAD to code. <br>
+        Ready to dive in?
+      </p>
+      <div class="button-container">
+        <button class="learn-more" onclick="window.location.href='about.html'">Launch Portfolio</button>
+        <img src="space-shuttle.png" alt="Click Here" class="mouse-click-icon" />
+      </div>
+    </div>
+  </div>
+</body>
+</html>
