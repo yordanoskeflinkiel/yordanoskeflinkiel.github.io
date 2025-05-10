@@ -29,10 +29,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background: linear-gradient(to right, #0f766e, #14b8a6);
+    padding: 1.2rem 2rem;
+    background-image: url('nebula3.PNG');
     color: white;
-    box-shadow: 0 2px 8px var(--shadow);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.311); 
   }
 
   nav a {
@@ -43,9 +43,25 @@
     transition: color 0.3s ease;
   }
 
-  nav a:hover {
-    color: var(--accent);
+   nav a:hover {
+    color: rgb(207, 207, 207);
   }
+  .nav-button {
+  background-color: rgb(0, 0, 0);
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  font-weight: 550;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  backdrop-filter: blur(4px);
+}
+
+.nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.407);
+  transform: translateY(-2px);
+}
 
   section {
     max-width: 1600px;
@@ -58,7 +74,7 @@
     margin-bottom: 2.5rem;
     font-weight: 700;
     text-align: center;
-    color: #0f766e;
+    color: #000000;
     position: relative;
   }
 
@@ -66,7 +82,7 @@
     content: '';
     width: 60px;
     height: 4px;
-    background: var(--primary);
+    background: #6c6c6c;
     position: absolute;
     bottom: -10px;
     left: 50%;
@@ -110,7 +126,7 @@
     margin-top: 0;
     color: #1f2937;
     font-size: 1.5rem;
-    border-left: 4px solid var(--primary);
+    border-left: 4px solid #6c6c6c;
     padding-left: 0.75rem;
   }
 
@@ -143,17 +159,17 @@
     transform: scale(1.05);
   }
 
-  footer {
-    background: linear-gradient(to right, var(--primary), var(--dark-bg));
-    color: #e5e7eb;
+ footer {
+    background: linear-gradient(to right, #606060, #000000);
+    color: white;
     text-align: center;
-    padding: 2.5rem 1rem;
+    padding: 2.0rem 1rem;
     font-size: 0.95rem;
     margin-top: 4rem;
   }
 
   footer a {
-    color: var(--accent);
+    color: white;
     text-decoration: none;
     font-weight: 500;
   }
@@ -191,26 +207,18 @@
         animation: float 3s ease-in-out infinite;
     }
 </style>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F8KDDXQLW5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){ dataLayer.push(arguments); }
-  gtag('js', new Date());
-  gtag('config', 'G-F8KDDXQLW5');
-</script>
 </head>
 <body>
     <img src="meteor.png" alt="Scroll Pet" id="scroll-pet">
   <nav>
-    <div>
-      <a href="about.html">About Me</a>
-    </div>
-    <div>
-      <a href="projects.html">Projects</a>
-      <a href="3d_work.html">3D Work</a>
-    </div>
-  </nav>
+  <div>
+    <a href="about.html" class="nav-button">About Me</a>
+  </div>
+  <div>
+    <a href="projects.html" class="nav-button">Projects</a>
+    <a href="3d_work.html" class="nav-button">3D Work</a>
+  </div>
+</nav>
 
   <section>
     <h2 class="section-title">3D Work</h2>
