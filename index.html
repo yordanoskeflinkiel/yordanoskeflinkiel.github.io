@@ -23,7 +23,7 @@
       margin: 0;
       padding: 0;
       font-family: 'Inter', sans-serif;
-      background-color: var(--background);
+      background-image: url('spacebackground.jpg');
       height: 100vh;
       display: flex;
       justify-content: center;
@@ -66,7 +66,7 @@
 
     h1 {
       font-size: 2.25rem;
-      color: var(--teal);
+      color: #000000;
       margin-bottom: 1rem;
     }
 
@@ -84,19 +84,21 @@
     }
 
     .learn-more {
-      background-color: var(--teal);
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 999px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.2s ease;
+        background-color: rgb(0, 0, 0);
+        padding: 0.5rem 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 20px;
+        font-weight: 550;
+        color: white;
+        text-decoration: none;
+        transition: background 0.3s ease, transform 0.2s ease;
+        backdrop-filter: blur(4px);
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.21);
     }
 
     .learn-more:hover {
-      background-color: #115e59;
-      transform: scale(1.05);
+      background-color: rgba(0, 0, 0, 0.407);
+  transform: translateY(-2px);
     }
 
     .mouse-click-icon {
@@ -106,7 +108,7 @@
 
     @keyframes float {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
+      50% { transform: translateY(-15px); }
     }
 
     @keyframes fadeIn {
@@ -129,11 +131,11 @@
     }
     .rocket-container {
         position: fixed;
-        top: 20%;
+        top: 25%;
         left: -100px;
         z-index: 9999;
         pointer-events: none;
-        animation: flyLinear 8s linear infinite;
+        animation: flyLinear 7s linear infinite;
         display: flex;
         align-items: center;
         gap: 0.5rem;
@@ -168,6 +170,7 @@
         }
         50% {
             transform: translateX(60vw) translateY(-10px);
+            opacity: 0.8
         }
         100% {
             transform: translateX(110vw) translateY(10px);
@@ -177,7 +180,7 @@
 
     @keyframes pulseTrail {
         0%, 100% {
-            opacity: 0.7;
+            opacity: 0.6;
             transform: scaleX(1) rotate(-15deg);
         }
         50% {
@@ -217,4 +220,3 @@
   </div>
 </body>
 </html>
-
