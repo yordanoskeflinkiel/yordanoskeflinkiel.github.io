@@ -31,23 +31,40 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background: linear-gradient(to right, #0f766e, #14b8a6);
+    padding: 1.2rem 2rem;
+    background-image: url('nebula.jpg');
     color: white;
-    box-shadow: 0 2px 8px var(--shadow);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.311); 
   }
 
   nav a {
     color: white;
     text-decoration: none;
     margin: 0 1rem;
-    font-weight: 500;
+    font-weight: 600;
     transition: color 0.3s ease;
   }
 
   nav a:hover {
-    color: var(--accent);
+    color: rgb(207, 207, 207);
   }
+  .nav-button {
+  background-color: rgb(0, 0, 0);
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  font-weight: 550;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  backdrop-filter: blur(4px);
+}
+
+.nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.407);
+  transform: translateY(-2px);
+}
+
 
   section {
     max-width: 1100px;
@@ -80,23 +97,25 @@
   .hero-text h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #0f766e;
+    color: #000000;
   }
 
   .hero-text a.button {
-    display: inline-block;
-    background-color: #14b8a6;
-    color: white;
-    padding: 0.6rem 1.4rem;
-    border-radius: 8px;
-    text-decoration: none;
-    margin-top: 1rem;
-    font-weight: 600;
-    transition: background 0.3s ease;
+    background-color: rgb(0, 0, 0);
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  font-weight: 550;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.21);
   }
 
   .hero-text a.button:hover {
-    background-color: #0f766e;
+    background-color: rgba(0, 0, 0, 0.407);
+  transform: translateY(-2px);
   }
 
   .section-title {
@@ -104,7 +123,7 @@
     margin-bottom: 2rem;
     font-weight: 700;
     text-align: center;
-    color: #0f766e;
+    color: #000000;
     position: relative;
   }
 
@@ -112,7 +131,7 @@
     content: '';
     width: 60px;
     height: 4px;
-    background: var(--primary);
+    background: #6c6c6c;
     position: absolute;
     bottom: -10px;
     left: 50%;
@@ -173,7 +192,7 @@
   }
 
   footer {
-    background: linear-gradient(to right, #0f766e, #0f172a);
+    background: linear-gradient(to right, #606060, #000000);
     color: white;
     text-align: center;
     padding: 2.0rem 1rem;
@@ -182,7 +201,7 @@
   }
 
   footer a {
-    color: var(--accent);
+    color: white;
     text-decoration: none;
     font-weight: 500;
   }
@@ -238,29 +257,22 @@
     }
 
 </style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F8KDDXQLW5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){ dataLayer.push(arguments); }
-  gtag('js', new Date());
-  gtag('config', 'G-F8KDDXQLW5');
-</script>
+
 </head>
 <body>
    <img src="astronaut.png" alt="Scroll Pet" id="scroll-pet">
 
 
+<nav>
+  <div>
+    <a href="about.html" class="nav-button">About Me</a>
+  </div>
+  <div>
+    <a href="projects.html" class="nav-button">Projects</a>
+    <a href="3d_work.html" class="nav-button">3D Work</a>
+  </div>
+</nav>
 
-  <nav>
-    <div>
-      <a href="about.html">About Me</a>
-    </div>
-    <div>
-      <a href="projects.html">Projects</a>
-      <a href="3d_work.html">3D Work</a>
-    </div>
-  </nav>
 
   <section class="hero">
     <img src="profile-picture.jpg" alt="Yordanos Keflinkiel">
@@ -269,7 +281,7 @@
       <p>
         I'm a second-year Mechanical Engineering student at Ontario Tech University. I’ve been developing hands-on skills in design and simulation using SolidWorks and Blender, exploring how mechanical components interact in real-world systems. I’m proud of the progress I’ve made and excited to keep growing as an engineer.
       </p>
-      <a class="button" href="https://yordanoskeflinkiel.github.io/YordanosKeflinkiel_MSResume2025.pdf" target="_blank">Download Resume</a>
+      <a class="button" href="https://yordanoskeflinkiel.github.io/YordanosKeflinkiel_MSResume2025.pdf" target="_blank">View Resume</a>
     </div>
   </section>
 
@@ -277,7 +289,7 @@
     <h2 class="section-title">🚀 Extracurricular Involvement</h2>
     <ul class="extra-list">
         <li><img src="nuclear.PNG" alt="Nuclear"> <span>Reactor Simulator Research Group </span></li>
-        <li><img src="wie.png" alt="wie"> <span>Women in Engineering - Director of Marketing </span></li>
+        <li><img src="wie.png" alt="Nuclear"> <span>Women in Engineering - Director of Marketing </span></li>
         <li><img src="rocket.jpeg" alt="Rocketry"> <span>Rocketry Team Member – Propulsion Department</span></li>
         <li><img src="robotics.jpeg" alt="Robotics"> <span>Robotics Team Member – Software Department</span></li>
     </ul>
